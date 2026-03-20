@@ -16,6 +16,9 @@ const btnSkip = document.getElementById('btn-skip');
 
 onDisconnect(ref(db, `users/${userId}`)).remove();
 
+// Checking if JS loaded properly
+console.log("App initialized. Waiting for button clicks...");
+
 // 1. CREATE PRIVATE CHAT
 document.getElementById('btn-create-private').addEventListener('click', async () => {
     const hasMedia = await setupMedia();
